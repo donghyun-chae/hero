@@ -23,3 +23,9 @@
 | [97, 98] | [197, 198] | 0 |
 | [131, 132] | [211, 212] | 1 |
 | [99, 102] | [211, 212] | -1 |
+
+### feature implement list
+- Get two parameter type of Int and return bigger one function (cmpBig)
+- Get one parameter type of Int and add each integer and return Int function (addeachNum)
+- Get one parameter type of Int and multiple each integer and return Int function (multeachNum)
+- Get two parameter type of Int and check exception function (checkException)
