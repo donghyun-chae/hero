@@ -17,7 +17,7 @@
 - result는 이메일에 해당하는 부분의 문자열을 오름차순으로 정렬하고 중복은 제거한다.
 
 ### 실행 결과 예시
-
+[PROBLEM7.md](PROBLEM7.md)
 | forms | result                                               |
 | --- |------------------------------------------------------|
 | [ ["jm@email.com", "제이엠"], ["jason@email.com", "제이슨"], ["woniee@email.com", "워니"], ["mj@email.com", "엠제이"], ["nowm@email.com", "이제엠"] ] | 1["jason@email.com", "jm@email.com", "mj@email.com"] |
