@@ -6,23 +6,21 @@ fun solution7(
     visitors: List<String>
 ): List<String> {
     val table = hashMapOf<String, Int>()
-    val myfriends = mutableSetOf<String>()
+    val myFriends = mutableSetOf<String>()
 
     friends.forEach { acc -> when {
-        user == acc[0] -> myfriends.add(acc[1])
-        user == acc[1] -> myfriends.add(acc[0])
-        else -> {}
+        user == acc[0] -> myFriends.add(acc[1])
+        user == acc[1] -> myFriends.add(acc[0])
     } }
 
     friends.forEach { acc -> when {
         acc[0] == user || acc[1] == user -> {}
-        acc[0] in myfriends && acc[1] !in myfriends -> table[acc[1]] = table.getOrDefault(acc[1], 0) + 10
-        acc[1] in myfriends && acc[0] !in myfriends -> table[acc[0]] = table.getOrDefault(acc[0], 0) + 10
-        else -> {}
+        acc[0] in myFriends && acc[1] !in myFriends -> table[acc[1]] = table.getOrDefault(acc[1], 0) + 10
+        acc[1] in myFriends && acc[0] !in myFriends -> table[acc[0]] = table.getOrDefault(acc[0], 0) + 10
     } }
+
     visitors.forEach { acc -> when {
-        acc !in myfriends && acc != user -> table[acc] = table.getOrDefault(acc, 0) + 1
-        else -> {}
+        acc !in myFriends && acc != user -> table[acc] = table.getOrDefault(acc, 0) + 1
     } }
 
     val result = mutableListOf<String>()
